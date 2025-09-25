@@ -1,0 +1,108 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Horizontal pinned cards layout */
+.pinned-section {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.pinned-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.pinned-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  max-width: 100%;
+}
+
+.pinned-item {
+  flex: 0 0 auto; /* prevent shrinking; keep natural width */
+}
+
+/* Selected section stays left-aligned and unaffected by pinned row width */
+.selected-section {
+  display: inline-block;
+  max-width: 100%;
+  text-align: left;
+}
+
+/* Card header layout inside CryptoCard */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-pin {
+  flex: 0 0 auto;
+}
+
+/* CryptoCard visuals */
+.crypto-card {
+  width: 16rem; /* match previous w-64 */
+  border: 1px solid #e5e7eb; /* light gray */
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  position: relative;
+  background: #ffffff;
+  color: black;
+  margin: 0.25rem; /* small margin around each card */
+}
+
+/* Extra spacing between cards in the pinned row */
+.pinned-row .crypto-card {
+  margin-right: 1rem;
+}
